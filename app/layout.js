@@ -16,18 +16,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/icons/icon-192x192.png" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
       </head>
-      <body className="min-h-screen bg-scroll bg-origin-border bg-cover bg-center text-white overflow-hidden" style={{ backgroundImage: "url('/images/bg.jpg')" }}>
-        {/* Logo */}
-        <div className="absolute left-4 z-20">
-          <Image
-            src="/images/logo.png"
-            alt="Alingo logo"
-            width={224}
-            height={64}
-            className="hidden sm:block w-30 lg:w-50 h-auto"
-            priority
-          />
-        </div>
+      <body className="min-h-screen bg-scroll bg-origin-border bg-cover bg-center text-white" style={{ backgroundImage: "url('/images/bg.jpg')" }}>
         {children}
       </body>
     </html>

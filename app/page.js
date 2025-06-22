@@ -1,9 +1,22 @@
 import Image from "next/image";
+import Link from 'next/link';
 import CharacterIllustration from '../components/characters';
 
 export default function Home() {
   return (
     <div >
+      {/* Logo */}
+      <div className="absolute top-2 left-6 z-20">
+        <Image
+          src="/images/logo.png"
+          alt="Alingo logo"
+          width={224}
+          height={64}
+          className="w-36 md:w-56 h-auto"
+          priority
+        />
+      </div>
+
       {/* Hero Section */}
       <section className="text-center mt-10 px-4 pt-28 pb-10 max-w-screen-xl mx-auto">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-snug">
@@ -33,19 +46,9 @@ export default function Home() {
         {/* Form */}
         <form id="userForm">
           <div className="mt-6 flex justify-center">
-            <div className="flex flex-nowrap w-full max-w-md">
-              <input
-                type="email"
-                name="email"
-                placeholder="EMAIL ADDRESS"
-                className="flex-grow text-xs sm:text-sm px-3 py-2 rounded-l-2xl text-white bg-transparent border border-white border-r-0"
-              />
-              <button
-                type="submit" className="px-3 sm:px-4 py-2 text-xs sm:text-sm text-white font-semibold bg-green-800 hover:bg-green-700 rounded-r-2xl whitespace-nowrap"
-              >
-                JOIN THE WAITLIST
-              </button>
-            </div>
+              <Link href="/signup">
+                <button className="w-full mx-2 px-10 bg-[#004A40] hover:bg-green-900 text-white py-3 rounded-lg font-semibold mb-2">Get Started</button>
+              </Link>
           </div>
         </form>
       </section>

@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import PasswordField from '@/components/hidePassword';
 
 export default function SignIn() {
     const [password, setPassword] = useState('');
@@ -16,21 +17,17 @@ export default function SignIn() {
     return (
         <div className='px-5'>
             {/* Title */}
-            <h1 className="text-center text-2xl sm:text-3xl mt-6 font-bold text-green-900 mb-1">Set New Password</h1>
+            <h1 className="text-center text-2xl sm:text-3xl mt-6 font-bold text-[#004A40] mb-1">Set New Password</h1>
 
             {/* Form */}
-            <form className="space-y-3 text-green-900 mt-10 font-medium">
-                <input
-                    type="password"
-                    placeholder="New Password"
+            <form className="space-y-3 text-[#004A40] mt-10 font-medium">
+                <PasswordField
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="w-full bg-gray-100 border border-green-900 rounded-full px-8 py-2 text-sm focus:outline-none"
+                    placeholder="Create a strong password"
                 />
-                <input
-                    type="password"
+                <PasswordField
                     placeholder="Confirm New Password"
-                    className="w-full bg-gray-100 border border-green-900 rounded-full px-8 py-2 mb-0 text-sm focus:outline-none"
                 />
                 <ul className="mt-4 text-xs">
                     <CheckItem label="At least 8 characters" passed={checks.length} />
@@ -41,7 +38,7 @@ export default function SignIn() {
                 </ul>
                 <button
                     type="submit"
-                    className="w-full bg-green-900 hover:bg-green-800 text-white py-2 mt-8 rounded-full text-sm font-semibold"
+                    className="w-full bg-[#004A40] hover:bg-green-800 text-white py-2 mt-8 rounded-full text-sm font-semibold"
                 >
                     Confirm
                 </button>

@@ -7,7 +7,7 @@ export default function VerifyEmail() {
 
     return (
         <div className="px-8 w-full max-w-sm text-center">
-            <h1 className="text-xl sm:text-2xl font-extrabold text-green-900 mb-2">Verify Your Email</h1>
+            <h1 className="text-xl sm:text-2xl font-extrabold text-[#004A40] mb-2">Verify Your Email</h1>
             <p className="text-xs sm:text-sm text-green-800 mb-4">Please enter the 4-digit code sent to <br />  <strong>hello@alingo.africa</strong></p>
 
             <div className="flex justify-center gap-2 mb-4">
@@ -42,17 +42,17 @@ export default function VerifyEmail() {
                                 }
                             }
                         }}
-                        className="w-12 h-12 border border-gray-300 rounded-md text-green-900 text-xl text-center focus:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-green-900"
+                        className="w-12 h-12 border border-gray-300 rounded-md text-[#004A40] text-xl text-center focus:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-[#004A40]"
                     />
                 ))}
 
             </div>
 
-            <button className="text-sm text-black mb-3 hover:text-green-900">Resend Code</button>
+            <button className="text-sm text-black mb-3 hover:text-[#004A40]">Resend Code</button>
 
-            <button className="w-full bg-green-900 hover:bg-green-800 text-white py-2 rounded-full font-semibold mb-2">Confirm</button>
+            <button className="w-full bg-[#004A40] hover:bg-green-800 text-white py-2 rounded-full font-semibold mb-2">Confirm</button>
 
-            <button className="text-sm text-black hover:text-green-900">Change Email Address</button>
+            <button className="text-sm text-black hover:text-[#004A40]">Change Email Address</button>
         </div>
     );
 }

@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import PasswordField from '@/components/hidePassword';
 
 export default function SignUp() {
     const [password, setPassword] = useState('');
@@ -16,7 +17,7 @@ export default function SignUp() {
     return (
         <div>
             {/* Title */}
-            <h1 className="hidden sm:block text-center text-2xl sm:text-3xl font-bold text-green-900 mb-1">Sign Up</h1>
+            <h1 className="hidden sm:block text-center text-2xl sm:text-3xl font-bold text-[#004A40] mb-1">Sign Up</h1>
             <p className="hidden sm:block text-center text-sm text-gray-600 mb-4">Let us get to know you more</p>
 
             {/* Google Button */}
@@ -33,23 +34,19 @@ export default function SignUp() {
             </div>
 
             {/* Form */}
-            <form className="space-y-3 text-green-900 font-medium">
+            <form className="space-y-3 text-[#004A40] font-medium">
                 <input
                     type="email"
                     placeholder="Email Address"
-                    className="w-full bg-gray-100 border border-green-900 rounded-full px-8 py-2 text-sm focus:outline-none"
+                    className="w-full bg-gray-100 border border-[#004A40] rounded-full px-8 py-2 text-sm focus:outline-none"
                 />
-                <input
-                    type="password"
-                    placeholder="Password"
+                <PasswordField
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="w-full bg-gray-100 border border-green-900 rounded-full px-8 py-2 text-sm focus:outline-none"
+                    placeholder="Password"
                 />
-                <input
-                    type="password"
+                <PasswordField
                     placeholder="Confirm Password"
-                    className="w-full bg-gray-100 border border-green-900 rounded-full px-8 py-2 text-sm focus:outline-none"
                 />
                 <ul className='text-xs'>
                     <CheckItem label="At least 8 characters" passed={checks.length} />
@@ -60,7 +57,7 @@ export default function SignUp() {
                 </ul>
                 <button
                     type="submit"
-                    className="w-full bg-green-900 hover:bg-green-800 text-white py-2 rounded-full mt-2 text-sm font-semibold"
+                    className="w-full bg-[#004A40] hover:bg-green-800 text-white py-2 rounded-full mt-2 text-sm font-semibold"
                 >
                     Sign Up
                 </button>
@@ -69,7 +66,7 @@ export default function SignUp() {
             {/* Footer */}
             <p className="text-xs text-center font-medium text-black mt-1">
                 Already have an account?{' '}
-                <Link href="/login" className="text-green-900 hover:underline">
+                <Link href="/login" className="text-[#004A40] hover:underline">
                     Sign In
                 </Link>
             </p>
