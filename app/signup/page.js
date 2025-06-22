@@ -51,7 +51,7 @@ export default function SignUp() {
                     placeholder="Confirm Password"
                     className="w-full bg-gray-100 border border-green-900 rounded-full px-8 py-2 text-sm focus:outline-none"
                 />
-                <ul className="mt-4 text-xs space-y-1">
+                <ul>
                     <CheckItem label="At least 8 characters" passed={checks.length} />
                     <CheckItem label="At least one uppercase letter (A-Z)" passed={checks.uppercase} />
                     <CheckItem label="At least one lowercase letter (a-z)" passed={checks.lowercase} />
@@ -60,7 +60,7 @@ export default function SignUp() {
                 </ul>
                 <button
                     type="submit"
-                    className="w-full bg-green-900 hover:bg-green-800 text-white py-2 rounded-full mt-8 text-sm font-semibold"
+                    className="w-full bg-green-900 hover:bg-green-800 text-white py-2 rounded-full mt-4 text-sm font-semibold"
                 >
                     Sign Up
                 </button>

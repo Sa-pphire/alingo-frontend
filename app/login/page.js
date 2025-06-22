@@ -6,7 +6,7 @@ export default function SignIn() {
     return (
         <div>
             {/* Title */}
-            <h1 className="hidden sm:block text-center text-2xl sm:text-3xl font-bold pt-2 text-green-900 mb-1">Sign In</h1>
+            <h1 className="hidden sm:block text-center text-2xl sm:text-3xl font-bold text-green-900 mb-1">Sign In</h1>
             <p className="hidden sm:block text-center text-sm text-gray-600 mb-4">Let us get to know you more</p>
 
             {/* Google Button */}
