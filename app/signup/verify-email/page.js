@@ -6,7 +6,7 @@ export default function VerifyEmail() {
     const [code, setCode] = useState(['', '', '', '']);
 
     return (
-        <div className="p-8 w-full max-w-sm text-center">
+        <div className="px-8 w-full max-w-sm text-center">
             <h1 className="text-xl sm:text-2xl font-extrabold text-green-900 mb-2">Verify Your Email</h1>
             <p className="text-xs sm:text-sm text-green-800 mb-4">Please enter the 4-digit code sent to <br />  <strong>hello@alingo.africa</strong></p>
 

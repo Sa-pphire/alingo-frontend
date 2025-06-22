@@ -34,12 +34,12 @@ export default function SignIn() {
                     placeholder="Password"
                     className="w-full bg-gray-100 border border-green-900 rounded-full px-8 py-2 mb-0 text-sm focus:outline-none"
                 />
-                <Link href="/login/forgot-password" className="text-xs px-4 text-green-900 hover:underline">
+                <Link href="/login/forgot-password" className="text-xs px-4 mt-4 text-green-900 hover:underline">
                     Forgot Password
                 </Link>
                 <button
                     type="submit"
-                    className="w-full bg-green-900 hover:bg-green-800 text-white py-2 mt-8 rounded-full text-sm font-semibold"
+                    className="w-full bg-green-900 hover:bg-green-800 text-white py-2 mt-10 rounded-full text-sm font-semibold"
                 >
                     Sign In
                 </button>

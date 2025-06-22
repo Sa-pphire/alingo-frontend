@@ -14,7 +14,7 @@ export default function SignIn() {
         symbol: /[!@#$%^&*(),.?":{}|<>]/.test(password),
     };
     return (
-        <div className='px-10'>
+        <div className='px-5'>
             {/* Title */}
             <h1 className="text-center text-2xl sm:text-3xl mt-6 font-bold text-green-900 mb-1">Set New Password</h1>
 
