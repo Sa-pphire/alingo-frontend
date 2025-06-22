@@ -55,12 +55,11 @@ export default function SignUp() {
                     <CheckItem label="At least one number (0-9)" passed={checks.number} />
                     <CheckItem label="At least one symbol (!@#...)" passed={checks.symbol} />
                 </ul>
-                <button
-                    type="submit"
-                    className="w-full bg-[#004A40] hover:bg-green-800 text-white py-2 rounded-full mt-2 text-sm font-semibold"
-                >
-                    Sign Up
-                </button>
+                <Link href="/signup/verify-email">
+                    <button type="submit" className="w-full bg-[#004A40] hover:bg-green-900 text-white py-2 rounded-full mt-2 text-sm font-semibold">
+                        Sign Up
+                    </button>
+                </Link>
             </form>
 
             {/* Footer */}

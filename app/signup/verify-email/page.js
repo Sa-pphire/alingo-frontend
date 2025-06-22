@@ -1,5 +1,5 @@
 'use client';
-
+import Link from 'next/link';
 import { useState } from 'react';
 
 export default function VerifyEmail() {
@@ -48,10 +48,10 @@ export default function VerifyEmail() {
 
             </div>
 
-            <button className="text-sm text-black mb-3 hover:text-[#004A40]">Resend Code</button>
-
-            <button className="w-full bg-[#004A40] hover:bg-green-800 text-white py-2 rounded-full font-semibold mb-2">Confirm</button>
-
+            <button className="text-sm text-black mb-3 hover:text-[#004A40]">Resend Code</button> 
+            <Link href="/signup/verified">
+                <button className="w-full bg-[#004A40] hover:bg-green-800 text-white py-2 rounded-full font-semibold mb-2">Confirm</button>
+            </Link>
             <button className="text-sm text-black hover:text-[#004A40]">Change Email Address</button>
         </div>
     );

@@ -1,5 +1,5 @@
 'use client';
-
+import Link from 'next/link';
 import { useState } from 'react';
 
 export default function ForgotPasswordReset() {
@@ -48,9 +48,9 @@ export default function ForgotPasswordReset() {
             </div>
 
             <button className="text-sm text-black mb-3 hover:text-[#004A40]">Resend Code</button>
-
-            <button className="w-full bg-[#004A40] hover:bg-green-900 text-white py-2 rounded-full font-semibold mb-2">Confirm</button>
-
+            <Link href="/login/reset-password">
+                <button className="w-full bg-[#004A40] hover:bg-green-900 text-white py-2 rounded-full font-semibold mb-2">Confirm</button>
+            </Link>
             <button className="text-sm text-black hover:text-[#004A40]">Change Email Address</button>
         </div>
     );

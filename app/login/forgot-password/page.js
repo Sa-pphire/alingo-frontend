@@ -16,13 +16,12 @@ export default function SignIn() {
                     placeholder="Email Address"
                     className="w-full bg-gray-100 border border-[#004A40] rounded-full px-8 py-2 text-sm focus:outline-none"
                 />
-
-                <button
-                    type="submit"
-                    className="w-full bg-[#004A40] hover:bg-green-800 text-white py-2 mt-8 rounded-full text-sm font-semibold"
-                >
-                    Send Code
-                </button>
+                <Link href="/login/forgot-password/reset">
+                    <button type="submit" className="w-full bg-[#004A40] hover:bg-green-800 text-white py-2 mt-8 rounded-full text-sm font-semibold">
+                        Send Code
+                    </button>
+                </Link>
+               
             </form>
         </div>
     );

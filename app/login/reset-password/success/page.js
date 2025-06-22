@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function ResetSuccess() {
     return (
         <div className="px-6 pb-8 pt-6 w-full max-w-sm text-center">
@@ -12,9 +14,9 @@ export default function ResetSuccess() {
             <h2 className="text-xl sm:text-3xl font-extrabold mb-2 text-[#004A40]">All Done!</h2>
             <p className="text-xs sm:text-sm text-green-800 mb-5">You have successfully reset your password.</p>
 
-            <a href="/login">
+            <Link href="/login">
                 <button className="w-full bg-[#004A40] hover:bg-green-800 text-white py-2 rounded-md font-semibold">Go To Sign In</button>
-            </a>
+            </Link>
         </div>
     );
 }

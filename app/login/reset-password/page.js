@@ -24,7 +24,7 @@ export default function SignIn() {
                 <PasswordField
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    placeholder="Create a strong password"
+                    placeholder="New password"
                 />
                 <PasswordField
                     placeholder="Confirm New Password"
@@ -36,12 +36,11 @@ export default function SignIn() {
                     <CheckItem label="At least one number (0-9)" passed={checks.number} />
                     <CheckItem label="At least one symbol (!@#...)" passed={checks.symbol} />
                 </ul>
-                <button
-                    type="submit"
-                    className="w-full bg-[#004A40] hover:bg-green-800 text-white py-2 mt-8 rounded-full text-sm font-semibold"
-                >
-                    Confirm
-                </button>
+                <Link href="/login/reset-password/success">
+                    <button type="submit" className="w-full bg-[#004A40] hover:bg-green-800 text-white py-2 mt-8 rounded-full text-sm font-semibold">
+                        Confirm
+                    </button>
+                </Link>
             </form>
         </div>
     );

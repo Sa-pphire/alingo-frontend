@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function VerifiedSuccess() {
     return (
         <div className="px-6 pb-8 pt-6 w-full max-w-sm text-center">
@@ -12,9 +14,9 @@ export default function VerifiedSuccess() {
             <h2 className="text-xl sm:text-3xl font-extrabold mb-2 text-[#004A40]">Verified!</h2>
             <p className="text-xs sm:text-sm text-green-800 mb-5">You have successfully verified your account.</p>
 
-            <a href="/dashboard">
+            <Link href="/dashboard">
                 <button className="w-full bg-[#004A40] hover:bg-green-900 text-white py-2 rounded-md font-semibold">Go To Dashboard</button>
-            </a>
+            </Link>
         </div>
     );
 }
