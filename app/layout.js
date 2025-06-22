@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
             alt="Alingo logo"
             width={224}
             height={64}
-            className="hidden sm:block w-30 lg:w-50 h-auto"
+            className="w-20 sm:w-30 lg:w-50 h-auto"
             priority
           />
         </div>
