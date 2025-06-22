@@ -6,7 +6,7 @@ export default function SignIn() {
     return (
         <div>
             {/* Title */}
-            <h1 className="text-center text-2xl sm:text-3xl font-bold text-green-900 mb-1">Forgot Password?</h1>
+            <h1 className="text-center text-2xl sm:text-3xl font-bold text-green-900 sm:mt-6 mb-1">Forgot Password?</h1>
             <p className="text-center text-xs sm:text-md text-green-800 mb-4">Please enter the email associated with your account</p>
 
             {/* Form */}
