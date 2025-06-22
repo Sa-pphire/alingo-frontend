@@ -5,17 +5,6 @@ import { useState } from 'react';
 export default function ForgotPasswordReset() {
     const [code, setCode] = useState(['', '', '', '']);
 
-    const handleChange = (value, index) => {
-        if (!/^[0-9]?$/.test(value)) return;
-        const newCode = [...code];
-        newCode[index] = value;
-        setCode(newCode);
-        // Move to next input
-        if (value && index < 3) {
-            document.getElementById(`code-${index + 1}`).focus();
-        }
-    };
-
     return (
         <div className="px-6 pb-8 pt-6  w-full max-w-sm text-center">
             <h1 className="text-xl sm:text-2xl font-extrabold text-green-900 mb-2">Enter Your Code</h1>
