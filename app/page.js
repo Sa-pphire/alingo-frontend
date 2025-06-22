@@ -4,18 +4,6 @@ import CharacterIllustration from '../components/characters';
 export default function Home() {
   return (
     <div >
-      {/* Logo */}
-      <div className="absolute top-2 left-6 z-20">
-        <Image
-          src="/images/logo.png"
-          alt="Alingo logo"
-          width={224}
-          height={64}
-          className="w-36 md:w-56 h-auto"
-          priority
-        />
-      </div>
-
       {/* Hero Section */}
       <section className="text-center mt-10 px-4 pt-28 pb-10 max-w-screen-xl mx-auto">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-snug">

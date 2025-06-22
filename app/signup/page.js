@@ -26,7 +26,7 @@ export default function SignUp() {
             </button>
 
             {/* OR Divider */}
-            <div className="flex items-center gap-2 my-4">
+            <div className="flex items-center gap-2 my-2">
                 <div className="flex-1 h-0.5 bg-gray-300"></div>
                 <span className="text-xs text-gray-500">OR</span>
                 <div className="flex-1 h-0.5 bg-gray-300"></div>
@@ -60,14 +60,14 @@ export default function SignUp() {
                 </ul>
                 <button
                     type="submit"
-                    className="w-full bg-green-900 hover:bg-green-800 text-white py-2 rounded-full mt-4 text-sm font-semibold"
+                    className="w-full bg-green-900 hover:bg-green-800 text-white py-2 rounded-full mt-2 text-sm font-semibold"
                 >
                     Sign Up
                 </button>
             </form>
 
             {/* Footer */}
-            <p className="text-xs text-center font-medium text-black mt-4">
+            <p className="text-xs text-center font-medium text-black mt-1">
                 Already have an account?{' '}
                 <Link href="/login" className="text-green-900 hover:underline">
                     Sign In
