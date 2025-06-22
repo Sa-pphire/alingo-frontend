@@ -7,7 +7,7 @@ import CharacterIllustration from '../../components/characters';
 
 export default function SigninLayout({ children }) {
     return (
-        <div className='items-center justify-center bg-cover bg-center overflow-hidden'>
+        <div className='items-center justify-center bg-cover bg-center'>
             {/* Mobile Title Outside Card */}
             <div className="bg-origin-border bg-contain bg-center text-white sm:hidden">
                 <h1 className="text-3xl font-bold text-white text-center mt-12 mb-4 sm:hidden"> Sign In </h1>

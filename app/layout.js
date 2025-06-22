@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/icons/icon-192x192.png" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
       </head>
-      <body className="min-h-screen bg-scroll bg-origin-border bg-cover bg-center text-white" style={{ backgroundImage: "url('/images/bg.jpg')" }}>
+      <body className="min-h-screen bg-scroll bg-origin-border bg-cover bg-center text-white overflow-hidden" style={{ backgroundImage: "url('/images/bg.jpg')" }}>
         {/* Logo */}
         <div className="absolute left-4 z-20">
           <Image
