@@ -14,7 +14,7 @@ export default function SignIn() {
         symbol: /[!@#$%^&*(),.?":{}|<>]/.test(password),
     };
     return (
-        <div>
+        <div className='px-10'>
             {/* Title */}
             <h1 className="text-center text-2xl sm:text-3xl mt-6 font-bold text-green-900 mb-1">Set New Password</h1>
 
@@ -50,7 +50,7 @@ export default function SignIn() {
     );
     function CheckItem({ label, passed }) {
         return (
-            <li className={`flex text-xs sm:text-sm items-center gap-2 ${passed ? 'text-green-600' : 'text-red-500'}`}>
+            <li className={`flex text-xs items-center gap-2 ${passed ? 'text-green-600' : 'text-red-500'}`}>
                 <span className="w-4 h-4 inline-block">
                     {passed ? (
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">

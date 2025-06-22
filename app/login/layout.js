@@ -16,7 +16,7 @@ export default function SigninLayout({ children }) {
                     alt="Alingo logo"
                     width={224}
                     height={64}
-                    className="hidden sm:block w-40 h-auto"
+                    className="hidden sm:block w-30 lg:w-50 h-auto"
                     priority
                 />
             </div>
