@@ -17,7 +17,7 @@ export default function ForgotPasswordReset() {
     };
 
     return (
-        <div className="px-6 pb-8 sm:pt-6  w-full max-w-sm text-center">
+        <div className="px-6 pb-8 pt-6  w-full max-w-sm text-center">
             <h1 className="text-xl sm:text-2xl font-extrabold text-green-900 mb-2">Enter Your Code</h1>
             <p className="text-xs text-green-800 mb-4">Please enter the 4-digit code sent to <br />  <strong>hello@alingo.africa</strong></p>
             <div className="flex justify-center gap-2 mb-4">
