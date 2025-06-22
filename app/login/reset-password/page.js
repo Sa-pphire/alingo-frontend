@@ -16,7 +16,7 @@ export default function SignIn() {
     return (
         <div>
             {/* Title */}
-            <h1 className="text-center text-2xl sm:text-3xl sm:mt-6 font-bold text-green-900 mb-1">Set New Password</h1>
+            <h1 className="text-center text-2xl sm:text-3xl mt-6 font-bold text-green-900 mb-1">Set New Password</h1>
 
             {/* Form */}
             <form className="space-y-3 text-green-900 mt-10 font-medium">
@@ -32,7 +32,7 @@ export default function SignIn() {
                     placeholder="Confirm New Password"
                     className="w-full bg-gray-100 border border-green-900 rounded-full px-8 py-2 mb-0 text-sm focus:outline-none"
                 />
-                <ul className="mt-4">
+                <ul className="mt-4 text-xs space-y-1">
                     <CheckItem label="At least 8 characters" passed={checks.length} />
                     <CheckItem label="At least one uppercase letter (A-Z)" passed={checks.uppercase} />
                     <CheckItem label="At least one lowercase letter (a-z)" passed={checks.lowercase} />
@@ -50,7 +50,7 @@ export default function SignIn() {
     );
     function CheckItem({ label, passed }) {
         return (
-            <li className={`flex text-[10px] items-center  ${passed ? 'text-green-600' : 'text-red-500'}`}>
+            <li className={`flex text-xs sm:text-sm items-center gap-2 ${passed ? 'text-green-600' : 'text-red-500'}`}>
                 <span className="w-4 h-4 inline-block">
                     {passed ? (
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
