@@ -6,6 +6,7 @@ import Image from "next/image";
 const headings = [
     { title: "What's your name?", subtitle: "What should we shout when we see you?" },
     { title: "When is your birthday?", subtitle: "We might send a cake (virtually)" },
+    { title: "Your journey begins here!", subtitle: "Which language would you love to explore?" },
     { title: "What’s your language level?", subtitle: "Rate your language street cred!" },
     { title: "Why do you want to learn Hausa?", subtitle: "You get ginger! But what’s fueling the fire?" },
 ];

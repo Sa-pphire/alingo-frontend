@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import StepName from './StepName';
 import StepAge from './StepAge';
+import StepLanguage from './StepLanguage';
 import StepExperience from './StepExperience';
 import StepReason from './StepReason';
 import ProgressBar from './ProgressBar';
@@ -12,6 +13,7 @@ export default function OnboardingForm() {
     firstName: '',
     lastName: '',
     age: '',
+    language: '',
     experience: '',
     reason: '',
   });
@@ -55,13 +57,14 @@ export default function OnboardingForm() {
   const steps = [
     <StepName value={{ firstName: formData.firstName, lastName: formData.lastName }} onChange={(val) => setFormData({ ...formData, firstName: val.firstName, lastName: val.lastName })} />,
     <StepAge value={formData.age} onChange={(val) => handleChange('age', val)} />,
+    <StepLanguage value={formData.language} onChange={(val) => handleChange('language', val)} />,
     <StepExperience value={formData.experience} onChange={(val) => handleChange('experience', val)} />,
     <StepReason value={formData.reason} onChange={(val) => handleChange('reason', val)} />,
   ];
 
   return (
     <div>
-      <ProgressBar currentStep={step} totalSteps={4} />
+      <ProgressBar currentStep={step} totalSteps={5} />
       <form className="space-y-6 mt-6" onSubmit={(e) => e.preventDefault()}>
         {steps[step]}
         <div className="flex pt-4">
@@ -79,8 +82,9 @@ export default function OnboardingForm() {
               type="button"
               className={`ml-auto px-5 py-2 z-50 rounded-md text-white transition ${(step === 0 && !formData.firstName || !formData.lastName) ||
                 (step === 1 && !formData.age) ||
-                (step === 2 && !formData.experience) ||
-                (step === 3 && !formData.reason)
+                (step === 2 && !formData.language)||
+                (step === 3 && !formData.experience) ||
+                (step === 4 && !formData.reason)
                 ? 'bg-gray-400 cursor-not-allowed'
                 : 'bg-[#004A40] hover:bg-emerald-800'
                 }`}
@@ -88,8 +92,9 @@ export default function OnboardingForm() {
               disabled={
                 (step === 0 && !formData.firstName || !formData.lastName) ||
                 (step === 1 && !formData.age) ||
-                (step === 2 && !formData.experience) ||
-                (step === 3 && !formData.reason)
+                (step === 2 && !formData.language)||
+                (step === 3 && !formData.experience) ||
+                (step === 4 && !formData.reason)
               }
             >
               Next
