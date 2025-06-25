@@ -37,7 +37,7 @@ export default function SignIn() {
                 <Link href="/login/forgot-password" className="text-xs px-4 mt-4 text-[#004A40] hover:underline">
                     Forgot Password
                 </Link>
-                <Link href="/dashboard">
+                <Link href="/onboarding">
                     <button type="submit" className="w-full bg-[#004A40] hover:bg-green-800 text-white py-2 mt-10 rounded-full text-sm font-semibold" >
                         Sign In
                     </button>
