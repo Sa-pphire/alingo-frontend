@@ -19,11 +19,11 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="text-center mt-10 px-4 pt-28 pb-10 max-w-screen-xl mx-auto">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-snug">
+        <h1 className="text-3xl text-white sm:text-4xl md:text-5xl font-bold leading-snug">
           Your Gateway To Learn African Languages
         </h1>
 
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-2 relative inline-block">
+        <h2 className="text-3xl text-white sm:text-4xl md:text-5xl font-bold mt-2 relative inline-block">
           In A{" "}
           <span className="relative inline-block">
             Fun Way
@@ -38,7 +38,7 @@ export default function Home() {
           </span>
         </h2>
 
-        <p className="mt-4 mx-auto text-lg sm:text-xl md:text-2xl max-w-2xl">
+        <p className="mt-4 text-white mx-auto text-lg sm:text-xl md:text-2xl max-w-2xl">
           Catch the vibe, speak the tribe, learning African languages just got
           lit!
         </p>

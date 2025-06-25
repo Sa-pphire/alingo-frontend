@@ -1,0 +1,110 @@
+'use client';
+import { useState, useEffect } from 'react';
+import StepName from './StepName';
+import StepAge from './StepAge';
+import StepExperience from './StepExperience';
+import StepReason from './StepReason';
+import ProgressBar from './ProgressBar';
+
+export default function OnboardingForm() {
+  const [step, setStep] = useState(0);
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    age: '',
+    experience: '',
+    reason: '',
+  });
+
+  useEffect(() => {
+    sessionStorage.setItem('onboardingStep', step);
+  }, [step]);
+
+  const handleChange = (field, value) => {
+    setFormData({ ...formData, [field]: value });
+  };
+
+  const nextStep = () => setStep((prev) => {
+    const newStep = prev + 1;
+    sessionStorage.setItem('onboardingStep', newStep);
+    return newStep;
+  });
+  const prevStep = () => setStep((prev) =>  {
+    const newStep = prev - 1;
+    sessionStorage.setItem('onboardingStep', newStep);
+    return newStep;
+  });
+
+
+  const handleFinish = async () => {
+    try {
+      const res = await fetch('/api/update-profile', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      if (res.ok) {
+        sessionStorage.removeItem('onboardingStep');
+        window.location.href = '/dashboard';
+      }
+    } catch (err) {
+      console.error('Submission error', err);
+    }
+  };
+
+  const steps = [
+    <StepName value={{ firstName: formData.firstName, lastName: formData.lastName }} onChange={(val) => setFormData({ ...formData, firstName: val.firstName, lastName: val.lastName })} />,
+    <StepAge value={formData.age} onChange={(val) => handleChange('age', val)} />,
+    <StepExperience value={formData.experience} onChange={(val) => handleChange('experience', val)} />,
+    <StepReason value={formData.reason} onChange={(val) => handleChange('reason', val)} />,
+  ];
+
+  return (
+    <div>
+      <ProgressBar currentStep={step} totalSteps={4} />
+      <form className="space-y-6 mt-6" onSubmit={(e) => e.preventDefault()}>
+        {steps[step]}
+        <div className="flex pt-4">
+          {step > 0 && (
+            <button
+              type="button"
+              className="text-sm text-gray-600 z-50 hover:underline"
+              onClick={prevStep}
+            >
+              Back
+            </button>
+          )}
+          {step < steps.length - 1 ? (
+            <button
+              type="button"
+              className={`ml-auto px-5 py-2 z-50 rounded-md text-white transition ${(step === 0 && !formData.firstName || !formData.lastName) ||
+                (step === 1 && !formData.age) ||
+                (step === 2 && !formData.experience) ||
+                (step === 3 && !formData.reason)
+                ? 'bg-gray-400 cursor-not-allowed'
+                : 'bg-[#004A40] hover:bg-emerald-800'
+                }`}
+              onClick={nextStep}
+              disabled={
+                (step === 0 && !formData.firstName || !formData.lastName) ||
+                (step === 1 && !formData.age) ||
+                (step === 2 && !formData.experience) ||
+                (step === 3 && !formData.reason)
+              }
+            >
+              Next
+            </button>
+          ) : (
+            <button
+              type="button"
+              className="ml-auto bg-[#004A40] hover:bg-emerald-800 z-50 text-white px-5 py-2 rounded-md"
+              onClick={handleFinish}
+            >
+              Finish
+            </button>
+          )}
+        </div>
+      </form>
+    </div>
+  );
+}
