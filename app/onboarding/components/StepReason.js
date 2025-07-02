@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function StepReason({ value, onChange }) {
+export default function StepReason({ value, onChange, selectedLanguage }) {
   const reasons = [
     {
       label: "Career",
@@ -66,7 +66,7 @@ export default function StepReason({ value, onChange }) {
 
   return (
     <div>
-      <label className="hidden sm:block text-2xl font-black text-center mb-1">Why do you want to learn an African Language?</label>
+      <label className="hidden sm:block text-2xl font-black text-center mb-1">Why do you want to learn {selectedLanguage}?</label>
       <p className="hidden sm:block text-sm text-emerald-800 text-center mb-6">
         You get ginger! But tell us what’s fueling the fire?
       </p>

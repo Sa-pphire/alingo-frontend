@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import clsx from 'clsx';
+import { MagnifyingGlassIcon } from '@heroicons/react/20/solid';
 
 const languages = [
     {
@@ -30,22 +31,46 @@ export default function StepLanguage({ value, onChange }) {
 
     return (
         <div>
-            <label className="hidden sm:block text-2xl text-center font-black mb-2">Your journey begins here!</label>
+            {/* Desktop Heading */}
+            <label className="hidden sm:block text-2xl text-center font-black mb-2">
+                Your journey begins here!
+            </label>
             <p className="hidden sm:block text-sm text-emerald-900 text-center mb-6">
                 Which language would you love to explore?
             </p>
 
             {/* Search bar */}
-            <div className="flex justify-center mb-6">
+            <div className="relative flex justify-center mb-6">
                 <input
                     type="text"
                     placeholder="Search"
-                    className="w-64 p-2 rounded-full border border-gray-500 shadow-sm text-center"
+                    className="w-full py-2 px-10 font-extrabold text-emerald-900 rounded-full border border-emerald-900 bg-gray-200 shadow-sm"
                 />
+                <MagnifyingGlassIcon className="h-4 w-4 text-emerald-900 absolute left-3 top-1/2 transform -translate-y-1/2" />
             </div>
 
-            {/* Language Cards */}
-            <div className="flex justify-center gap-6 flex-wrap">
+            {/* Mobile List View */}
+            <div className="flex flex-col gap-3 mb-15 sm:hidden">
+                {languages.map((lang) => (
+                    <div
+                        key={lang.name}
+                        onClick={() => {
+                            onChange(lang.name);
+                            sessionStorage.setItem('selectedLanguage', lang.name);
+                        }}
+                        className={clsx(
+                            "flex items-center gap-4 bg-white px-4 py-2 rounded-full shadow-lg cursor-pointer",
+                            value === lang.name && "ring-2 ring-cyan-400"
+                        )}
+                    >
+                        <Image src={lang.flag} alt={`${lang.name} flag`} width={30} height={30} />
+                        <p className="text-emerald-900 font-semibold text-lg">{lang.name}</p>
+                    </div>
+                ))}
+            </div>
+
+            {/*Desktop Cards */}
+            <div className="hidden sm:flex justify-center gap-6 flex-wrap">
                 {languages.map((lang, index) => {
                     const isFlipped = hovered === index;
                     const isSelected = value === lang.name;
@@ -55,7 +80,10 @@ export default function StepLanguage({ value, onChange }) {
                             key={lang.name}
                             onMouseEnter={() => setHovered(index)}
                             onMouseLeave={() => setHovered(null)}
-                            onClick={() => onChange(lang.name)}
+                            onClick={() => {
+                                onChange(lang.name);
+                                sessionStorage.setItem('selectedLanguage', lang.name);
+                            }}
                             className={clsx(
                                 "relative w-40 h-40 perspective cursor-pointer",
                                 isSelected && "ring-4 rounded-lg ring-cyan-400"

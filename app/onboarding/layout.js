@@ -10,17 +10,6 @@ export const metadata = {
 export default function OnboardingLayout({ children }) {
     return (
         <div>
-            {/* Logo */}
-            <div className="absolute left-4 mt-[-20px] z-20">
-                <Image
-                    src="/images/logo.png"
-                    alt="Alingo logo"
-                    width={224}
-                    height={64}
-                    className="hidden md:block w-30 lg:w-50 h-auto"
-                    priority
-                />
-            </div>
             {/* Mobile Title Outside Card */}
             <StepHeadingRenderer />
             <div className="min-h-screen sm:flex sm:items-center sm:justify-center sm:pt-10 sm:px-4 bg-white sm:bg-inherit">

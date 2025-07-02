@@ -31,7 +31,7 @@ export default function OnboardingForm() {
     sessionStorage.setItem('onboardingStep', newStep);
     return newStep;
   });
-  const prevStep = () => setStep((prev) =>  {
+  const prevStep = () => setStep((prev) => {
     const newStep = prev - 1;
     sessionStorage.setItem('onboardingStep', newStep);
     return newStep;
@@ -40,15 +40,18 @@ export default function OnboardingForm() {
 
   const handleFinish = async () => {
     try {
-      const res = await fetch('/api/update-profile', {
+      /*const res = await fetch('/api/update-profile', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
-      if (res.ok) {
+        if (res.ok) {
         sessionStorage.removeItem('onboardingStep');
         window.location.href = '/dashboard';
       }
+      */
+      sessionStorage.removeItem('onboardingStep');
+      window.location.href = '/dashboard';
     } catch (err) {
       console.error('Submission error', err);
     }
@@ -59,7 +62,7 @@ export default function OnboardingForm() {
     <StepAge value={formData.age} onChange={(val) => handleChange('age', val)} />,
     <StepLanguage value={formData.language} onChange={(val) => handleChange('language', val)} />,
     <StepExperience value={formData.experience} onChange={(val) => handleChange('experience', val)} />,
-    <StepReason value={formData.reason} onChange={(val) => handleChange('reason', val)} />,
+    <StepReason value={formData.reason} onChange={(val) => handleChange('reason', val)} selectedLanguage={formData.language} />
   ];
 
   return (
@@ -82,7 +85,7 @@ export default function OnboardingForm() {
               type="button"
               className={`ml-auto px-5 py-2 z-50 rounded-md text-white transition ${(step === 0 && !formData.firstName || !formData.lastName) ||
                 (step === 1 && !formData.age) ||
-                (step === 2 && !formData.language)||
+                (step === 2 && !formData.language) ||
                 (step === 3 && !formData.experience) ||
                 (step === 4 && !formData.reason)
                 ? 'bg-gray-400 cursor-not-allowed'
@@ -92,7 +95,7 @@ export default function OnboardingForm() {
               disabled={
                 (step === 0 && !formData.firstName || !formData.lastName) ||
                 (step === 1 && !formData.age) ||
-                (step === 2 && !formData.language)||
+                (step === 2 && !formData.language) ||
                 (step === 3 && !formData.experience) ||
                 (step === 4 && !formData.reason)
               }
