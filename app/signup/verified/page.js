@@ -14,7 +14,7 @@ export default function VerifiedSuccess() {
             <h2 className="text-xl sm:text-3xl font-extrabold mb-2 text-[#004A40]">Verified!</h2>
             <p className="text-xs sm:text-sm text-green-800 mb-5">You have successfully verified your account.</p>
 
-            <Link href="/dashboard">
+            <Link href="/onboarding">
                 <button className="w-full bg-[#004A40] hover:bg-green-900 text-white py-2 rounded-md font-semibold">Go To Dashboard</button>
             </Link>
         </div>

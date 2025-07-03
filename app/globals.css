@@ -19,6 +19,11 @@
   --font-mono: var(--font-geist-mono);
 }
 
+.gradient-border {
+   border: linear-gradient(168.32deg, #35FFBC 5.13%, #00A0DE 91.93%);
+  }
+
+
 .perspective {
   perspective: 1000px;
 }

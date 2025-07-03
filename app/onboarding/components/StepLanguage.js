@@ -87,14 +87,12 @@ export default function StepLanguage({ value, onChange }) {
                             className={clsx(
                                 "relative w-40 h-40 perspective cursor-pointer",
                                 isSelected && "ring-4 rounded-lg ring-cyan-400"
-                            )}
-                        >
+                            )}>
                             <div
                                 className={clsx(
                                     "w-full h-full transition-transform duration-500 preserve-3d relative",
                                     isFlipped && "rotate-y-180"
-                                )}
-                            >
+                                )}>
                                 {/* Front Face */}
                                 <div className="absolute w-full h-40 rounded-lg bg-emerald-900 text-white backface-hidden flex flex-col items-center justify-center border-2 border-cyan-500 shadow-lg">
                                     <Image src={lang.flag} alt="flag" width={50} height={50} />
@@ -109,7 +107,7 @@ export default function StepLanguage({ value, onChange }) {
                                 </div>
 
                                 {/* Back Face */}
-                                <div className="absolute w-full h-40 rounded-lg bg-white text-emerald-900 backface-hidden transform rotate-y-180 flex flex-col items-center justify-center border shadow-lg">
+                                <div className="absolute w-full h-40 rounded-lg bg-white text-emerald-900 backface-hidden transform rotate-y-180 flex flex-col items-center justify-center  border-2 border-cyan-500 shadow-lg">
                                     <Image src={lang.flag} alt="flag" width={50} height={50} />
                                     <p className="mt-2 italic">{lang.greeting}</p>
                                     <div className="mt-4 px-3 py-1 bg-orange-400 text-white text-xs rounded-full shadow">
