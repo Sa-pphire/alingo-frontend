@@ -22,7 +22,7 @@ export default function Dashboard() {
                     <span className="font-black">1</span>
                 </div>
                 <div className="flex items-center space-x-1">
-                    <Image src="/images/infinity.svg" alt='infinity' width={30} height={30} />
+                    <Image src="/images/Infinity.svg" alt='infinity' width={30} height={30} />
                     <span className="font-black">5</span>
                 </div>
             </div>

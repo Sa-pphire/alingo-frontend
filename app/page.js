@@ -46,7 +46,7 @@ export default function Home() {
         {/* Form */}
         <form id="userForm">
           <div className="mt-6 flex justify-center">
-              <Link href="/signup">
+              <Link href="/login">
                 <button className="w-full mx-2 px-10 bg-[#004A40] hover:bg-green-900 text-white py-3 rounded-lg font-semibold mb-2">Get Started</button>
               </Link>
           </div>
