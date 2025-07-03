@@ -1,8 +1,9 @@
 'use client';
 import Image from "next/image";
+import Link from 'next/link';
 import ProgressCircle from '@/components/ProgressCircle';
 import StepProgress from './components/StepProgress';
-import { FireIcon, UserIcon } from '@heroicons/react/24/solid';
+import { FireIcon } from '@heroicons/react/24/solid';
 
 
 export default function Dashboard() {
@@ -45,7 +46,7 @@ export default function Dashboard() {
                         Guidelines
                     </button>
                     <button className="bg-green-500 text-white py-2 rounded-2xl hover:bg-green-300 transition">
-                        Get Started
+                        <Link href="/dashboard/chapter">Get Started</Link>
                     </button>
                 </div>
 
