@@ -16,7 +16,7 @@ export default function PhrasePreview({ phrase, onNext, onPrev, isFirst, isLast 
             const options = {
                 method: 'POST',
                 headers: {
-                    Authorization: `Bearer sk_eysMYQvpw8fA4RfHbjG4Qy5ptFReT9k1tmAVlhJ1`,
+                    Authorization: `Bearer `,
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
