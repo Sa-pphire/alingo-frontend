@@ -40,7 +40,7 @@ export default function Chapter() {
                     <h3 className="text-9xl bg-gradient-to-r from-green-400 to-green-800 bg-clip-text text-transparent font-semibold p-2">1</h3>
                     <div className="ml-6 mr-4 w-px h-40 bg-emerald-900"></div>
                     <div className="py-6 space-y-4">
-                        <p className="text-emerald-900 text-2xl font-semibold">Nouns</p>
+                        <p className="text-emerald-900 text-2xl font-semibold">Novice</p>
                         <button className="border-4 border-emerald-900 text-emerald-900 text-lg px-4 font-semibold flex rounded-xl">
                             Test
                             <span><ArrowRightIcon className="w-5 h-5 mt-1 ml-2 text-emerald-950" /></span>
