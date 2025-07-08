@@ -10,9 +10,9 @@ export default function HeadingRenderer() {
 
   if (pathname === '/dashboard/chapter' || '/lesson') {
     return (
-      <div className=''>
+      <div className='mb-4 sm:mb-0'>
         {/* Stats & Unit */}
-        <div className="hidden sm:flex justify-center items-center space-x-6 my-4 text-[#004A40]">
+        <div className="hidden sm:flex justify-center items-center space-x-6 my-2 text-[#004A40]">
           <div className="flex items-center space-x-1">
             <Image src="/images/ng.png" alt='flag' width={30} height={30} />
           </div>

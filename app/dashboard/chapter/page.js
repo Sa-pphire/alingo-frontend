@@ -15,7 +15,7 @@ export default function Chapter() {
                     <div className="ml-6 mr-4 w-px h-40 bg-emerald-900"></div>
                     <div className="py-6 space-y-4">
                         <p className="text-emerald-900 text-2xl font-semibold">Novice</p>
-                        <button className="border-4 border-emerald-900 text-emerald-900 text-lg px-4 font-semibold flex rounded-xl">
+                        <button onClick={() => window.location.href = '/lesson'} className="border-4 border-emerald-900 text-emerald-900 text-lg px-4 font-semibold flex rounded-xl">
                             Test
                             <span><ArrowRightIcon className="w-5 h-5 mt-1 ml-2 text-emerald-950" /></span>
                         </button>
@@ -27,7 +27,7 @@ export default function Chapter() {
                     <div className="ml-4 mr-4 w-px h-40 bg-emerald-900"></div>
                     <div className="py-6 space-y-4">
                         <p className="text-emerald-900 text-2xl font-semibold">Solid</p>
-                        <button className="border-4 border-emerald-900 text-emerald-900 text-lg px-4 font-semibold flex rounded-xl">
+                        <button onClick={() => window.location.href = '/lesson'} className="border-4 border-emerald-900 text-emerald-900 text-lg px-4 font-semibold flex rounded-xl">
                             Test
                             <span><ArrowRightIcon className="w-5 h-5 mt-1 ml-2 text-emerald-950" /></span>
                         </button>
@@ -48,7 +48,7 @@ export default function Chapter() {
                     <div className="ml-2 mr-4 w-px h-40 bg-emerald-900"></div>
                     <div className="py-6 space-y-4">
                         <p className="text-emerald-900 text-2xl font-semibold">Pro</p>
-                        <button className="border-4 border-emerald-900 text-emerald-900 text-lg px-4 font-semibold flex rounded-xl">
+                        <button onClick={() => window.location.href = '/lesson'} className="border-4 border-emerald-900 text-emerald-900 text-lg px-4 font-semibold flex rounded-xl">
                             Test
                             <span><ArrowRightIcon className="w-5 h-5 mt-1 ml-2 text-emerald-950" /></span>
                         </button>

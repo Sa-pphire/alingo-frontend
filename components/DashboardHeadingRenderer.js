@@ -30,30 +30,7 @@ export default function DashboardHeadingRenderer() {
       </div>
     );
   }
-
-
-  if (pathname === '/dashboard' || '/dashboard/chapter') {
-    return (
-      <div className="sm:hidden flex justify-center text-white items-center space-x-6 my-8 text-[#004A40]">
-        <div className="flex items-center space-x-1">
-          <Image src="/images/ng.png" alt="flag" width={40} height={20} className='rounded-full border-2 border-green-200' />
-        </div>
-        <div className="flex items-center space-x-1">
-          <ProgressCircle progress={65} color={"#e5e7eb"} baseColor={"#81a5a0"} />
-          <span className="font-black">26/45</span>
-        </div>
-        <div className="flex items-center space-x-1">
-          <FireIcon className="w-5 h-5 text-orange-500" />
-          <span className="font-black">1</span>
-        </div>
-        <div className="flex items-center space-x-1">
-          <Image src="/images/Infinity-white.svg" alt="infinity White" width={30} height={30} />
-          <span className="font-black">5</span>
-        </div>
-      </div>
-    );
-  }
-
+  
   if (pathname === '/dashboard/profile') {
     return (
       <div className="sm:hidden flex flex-row items-center mt-8 mx-2 text-white">
@@ -88,6 +65,28 @@ export default function DashboardHeadingRenderer() {
             <Image src="/images/ng.png" alt="flag" width={40} height={40} className='rounded-full border-2 border-green-200' />
           </div>
           <p className="text-xs text-white mt-2">@Sapphire Joined Aug 2025</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (pathname === '/dashboard' || '/dashboard/chapter') {
+    return (
+      <div className="sm:hidden flex justify-center text-white items-center space-x-6 my-4 text-[#004A40]">
+        <div className="flex items-center space-x-1">
+          <Image src="/images/ng.png" alt="flag" width={40} height={20} className='rounded-full border-2 border-green-200' />
+        </div>
+        <div className="flex items-center space-x-1">
+          <ProgressCircle progress={65} color={"#e5e7eb"} baseColor={"#81a5a0"} />
+          <span className="font-black">26/45</span>
+        </div>
+        <div className="flex items-center space-x-1">
+          <FireIcon className="w-5 h-5 text-orange-500" />
+          <span className="font-black">1</span>
+        </div>
+        <div className="flex items-center space-x-1">
+          <Image src="/images/Infinity-white.svg" alt="infinity White" width={30} height={30} />
+          <span className="font-black">5</span>
         </div>
       </div>
     );
