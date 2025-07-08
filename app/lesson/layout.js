@@ -6,6 +6,7 @@ import DashboardHeadingRenderer from '@/components/DashboardHeadingRenderer';
 export const metadata = {
     title: 'Lesson | Alingo',
     description: 'Start learning African languages today.',
+    themeColor: "#FFFFFF",
 };
 
 
