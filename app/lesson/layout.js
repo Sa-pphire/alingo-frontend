@@ -11,11 +11,11 @@ export const metadata = {
 
 export default function LessonLayout({ children }) {
     return (
-        <div>
+        <div className="bg-white sm:bg-inherit">
             <DashboardHeadingRenderer />
             <div className="min-h-screen sm:flex sm:items-center sm:justify-center sm:px-4 sm:bg-inherit">
                 <div className="w-full sm:max-w-4xl">
-                    <main className="bg-white sm:rounded-4xl shadow-lg p-6 sm:pt-0 sm:px-0 min-h-screen sm:min-h-fit">
+                    <main className="bg-white sm:rounded-4xl shadow-lg px-6 sm:pt-0 sm:px-0 min-h-screen sm:min-h-fit">
                         {/* Desktop Header */}
                         <header className="hidden sm:flex justify-between items-center sm:px-10 mb-4 sm:mb-0">
                             <Image

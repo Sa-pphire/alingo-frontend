@@ -1,41 +1,15 @@
 'use client';
 import Image from "next/image";
-import ProgressCircle from '@/components/ProgressCircle';
-import { FireIcon, ArrowRightIcon } from '@heroicons/react/24/solid';
+import HeadingRenderer from "@/components/HeadingRenderer";
+import { ArrowRightIcon } from '@heroicons/react/24/solid';
 
 
 export default function Chapter() {
     return (
         <div className='sm:px-10'>
-            {/* Stats & Unit */}
-            <div className="hidden sm:flex justify-center items-center space-x-6 my-8 text-[#004A40]">
-                <div className="flex items-center space-x-1">
-                    <Image src="/images/ng.png" alt='flag' width={30} height={30} />
-                </div>
-                <div className="flex items-center space-x-1">
-                    <ProgressCircle progress={65} />
-                    <span className="font-black">26/45</span>
-                </div>
-                <div className="flex items-center space-x-1">
-                    <FireIcon className="w-5 h-5 text-orange-500" />
-                    <span className="font-black">1</span>
-                </div>
-                <div className="flex items-center space-x-1">
-                    <Image src="/images/Infinity.svg" alt='infinity' width={30} height={30} />
-                    <span className="font-black">5</span>
-                </div>
-            </div>
-
-            {/* Unit Progress */}
-            <div className="flex flex-col items-center mb-8">
-                <button className="bg-[#004A40] text-white px-12 py-2 rounded-full mb-4 shadow hover:bg-emerald-800">
-                    Unit 1
-                </button>
-                <h3 className="text-xl text-[#004A40] font-bold">Chapter 1</h3>
-            </div>
-
+            <HeadingRenderer/>
             {/* Lessons */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10 sm:mb-2">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10 sm:py-10 sm:mb-2">
                 <div className="bg-emerald-300 text-center rounded-3xl px-6 mx-0 shadow-md flex flex-row">
                     <h3 className="text-9xl bg-gradient-to-r from-green-400 to-green-800 bg-clip-text text-transparent font-semibold p-2">1</h3>
                     <div className="ml-6 mr-4 w-px h-40 bg-emerald-900"></div>

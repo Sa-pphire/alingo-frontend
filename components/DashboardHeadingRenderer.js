@@ -20,7 +20,19 @@ export default function DashboardHeadingRenderer() {
     }
   };
 
-  if (pathname === '/dashboard' || '/dashboard/chapter' || '/lesson') {
+  if (pathname === '/lesson') {
+    return (
+      <div className="sm:hidden flex justify-center text-[#004A40] items-center space-x-6">
+        <div className="flex items-center space-x-1">
+          <Image src="/images/Infinity.svg" alt="infinity White" width={50} height={50} />
+          <span className="text-2xl font-black">5</span>
+        </div>
+      </div>
+    );
+  }
+
+
+  if (pathname === '/dashboard' || '/dashboard/chapter') {
     return (
       <div className="sm:hidden flex justify-center text-white items-center space-x-6 my-8 text-[#004A40]">
         <div className="flex items-center space-x-1">
@@ -41,7 +53,7 @@ export default function DashboardHeadingRenderer() {
       </div>
     );
   }
-  
+
   if (pathname === '/dashboard/profile') {
     return (
       <div className="sm:hidden flex flex-row items-center mt-8 mx-2 text-white">

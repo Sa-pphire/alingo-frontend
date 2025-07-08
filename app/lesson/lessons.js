@@ -56,6 +56,7 @@ export const lessons = {
         "yoruba_pron": "Sheh ah-lah-fee-ah nee?",
         "igbo_pron": "Keh-doo",
         "hausa_pron": "LAH-fee-yah lah-oo?",
+        "type": "multiple_choice",
         "options": {
           "yoruba": ["Ṣé àlàáfíà ni?", "Ẹ káàbọ̀", "Dáradára", "Ẹ káàárọ̀"],
           "igbo": ["Kedu", "Ndeewo", "Ka chi fo", "Ị bịa"],
@@ -70,6 +71,7 @@ export const lessons = {
         "igbo_pron": "N-naw",
         "hausa": "Barka da zuwa",
         "hausa_pron": "BAR-kah dah ZOO-wah",
+        "type": "multiple_choice",
         "options": {
           "yoruba": ["Ẹ kú abọ", "Ṣé àlàáfíà ni?", "Odàárọ", "Ẹ kúùrọ̀lẹ́"],
           "igbo": ["Nnọọ", "Kedu", "Ka chi fo", "Daalụ"],
@@ -84,6 +86,7 @@ export const lessons = {
         "igbo_pron": "Aw-too-too mbeh-geh",
         "hausa": "Mun dade bamu hadu ba",
         "hausa_pron": "Moon DAH-deh BAH-moo HAH-doo bah",
+        "type": "audio_construct",
         "options": {
           "yoruba": ["Ó ti pé tí mo rí ẹ", "Inú mi dùn láti rí ẹ", "Mo wá láti Naijiria", "Ṣé o sun dáadáa?"],
           "igbo": ["Ọtụtụ mgbe", "Ndeewo", "Ka chi fo", "Ị si ebee?"],
@@ -98,6 +101,7 @@ export const lessons = {
         "igbo_pron": "Aw dee mm oo-taw ee-hu ghee",
         "hausa": "Na yi farin cikin ganinka",
         "hausa_pron": "Nah yee FAH-reen CHEE-keen GAH-neen-kah",
+        "type": "audio_construct",
         "options": {
           "yoruba": ["Inú mi dùn láti rí ẹ", "Ó ti pé tí mo rí ẹ", "Ṣé o sun dáadáa?", "Ẹ kú irin àjò"],
           "igbo": ["Ọ dị m ụtọ ịhụ gị", "Ka chi fo", "Nnọọ", "Aha m bụ ___"],
@@ -112,6 +116,7 @@ export const lessons = {
         "igbo_pron": "Naw gah n-keh aw-mah",
         "hausa": "Sai anjima",
         "hausa_pron": "Sigh AHN-jee-mah",
+        "type": "sentence_order",
         "options": {
           "yoruba": ["Ẹ kú irin àjò", "Odàárọ", "Mo fẹ́ kọ́ ẹ̀kọ́ síi", "Ṣé àlàáfíà ni?"],
           "igbo": ["Nọ gaa nke ọma", "Kedu", "Ka chi fo", "Ndeewo"],
