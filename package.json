@@ -13,6 +13,7 @@
     "@emotion/styled": "^11.14.1",
     "@heroicons/react": "^2.2.0",
     "@mui/material": "^7.2.0",
+    "@react-oauth/google": "^0.12.2",
     "animate.css": "^4.1.1",
     "animate.js": "^2.0.2",
     "animejs": "^4.0.2",
@@ -23,7 +24,8 @@
     "react": "^19.0.0",
     "react-datepicker": "^8.4.0",
     "react-dom": "^19.0.0",
-    "react-easy-crop": "^5.4.2"
+    "react-easy-crop": "^5.4.2",
+    "react-hot-toast": "^2.5.2"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.10",

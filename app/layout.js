@@ -1,5 +1,6 @@
 import './globals.css';
-import Image from "next/image";
+import { Toaster } from 'react-hot-toast';
+
 export const metadata = {
   title: 'Alingo',
   description: 'Learn African languages easily',
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
       </head>
       <body className="min-h-screen bg-scroll bg-origin-border bg-cover bg-center text-white" style={{ backgroundImage: "url('/images/bg.jpg')" }}>
+        <Toaster position="top-right" />
         {children}
       </body>
     </html>

@@ -1,8 +1,13 @@
-// app/signup/layout.js
+
+export const viewport = {
+  themeColor: '#004A40',
+}
+ 
 export const metadata = {
     title: 'Sign Up | Alingo',
     description: 'Start learning African languages today.',
 };
+
 import Image from "next/image";
 import CharacterIllustration from '../../components/characters';
 

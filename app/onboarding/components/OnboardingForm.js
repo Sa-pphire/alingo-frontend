@@ -6,6 +6,7 @@ import StepLanguage from './StepLanguage';
 import StepExperience from './StepExperience';
 import StepReason from './StepReason';
 import ProgressBar from './ProgressBar';
+import { toast } from 'react-hot-toast';
 
 export default function OnboardingForm() {
   const [step, setStep] = useState(0);
@@ -40,22 +41,38 @@ export default function OnboardingForm() {
 
   const handleFinish = async () => {
     try {
-      /*const res = await fetch('/api/update-profile', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+      const token = localStorage.getItem('token');
+      const isoAge = formData.age ? new Date(formData.age).toISOString() : null;
+
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/me`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          age: isoAge,
+          goal: formData.reason,
+          level: formData.experience,
+          language: formData.language,
+        }),
       });
-        if (res.ok) {
+
+      if (res.ok) {
         sessionStorage.removeItem('onboardingStep');
+        toast.success('Account Creation Successful!');
         window.location.href = '/dashboard';
+      } else {
+        const error = await res.json();
+        toast.error(error.message || 'Update failed');
       }
-      */
-      sessionStorage.removeItem('onboardingStep');
-      window.location.href = '/dashboard';
     } catch (err) {
-      console.error('Submission error', err);
+      toast.error('An error occurred while submitting your onboarding info.');
     }
   };
+
 
   const steps = [
     <StepName value={{ firstName: formData.firstName, lastName: formData.lastName }} onChange={(val) => setFormData({ ...formData, firstName: val.firstName, lastName: val.lastName })} />,

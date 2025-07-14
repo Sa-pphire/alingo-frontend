@@ -2,16 +2,21 @@ import Image from "next/image";
 import Link from 'next/link';
 import { UserIcon } from '@heroicons/react/24/solid';
 import DashboardHeadingRenderer from '@/components/DashboardHeadingRenderer';
+import ProtectedRoute from '@/components/ProtectedRoutes';
+ 
+export const viewport = {
+  themeColor: '#ffffff',
+}
 
 export const metadata = {
     title: 'Lesson | Alingo',
     description: 'Start learning African languages today.',
-    themeColor: "#FFFFFF",
 };
 
 
 export default function LessonLayout({ children }) {
     return (
+        <ProtectedRoute>
         <div className="bg-white sm:bg-inherit">
             <DashboardHeadingRenderer />
             <div className="min-h-screen sm:flex sm:items-center sm:justify-center sm:px-4 sm:bg-inherit">
@@ -45,5 +50,6 @@ export default function LessonLayout({ children }) {
                 </div>
             </div>
         </div>
+        </ProtectedRoute>
     );
 }

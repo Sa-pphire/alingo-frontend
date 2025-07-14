@@ -49,7 +49,7 @@ export default function PhrasePreview({ phrase, onNext, onPrev, isFirst, isLast 
     };
 
     return (
-        <div className="bg-emerald-900 px-14 py-10 my-10 rounded-xl shadow-lg text-center max-w-md mx-auto text-white">
+        <div className="px-14 py-10 my-10 rounded-xl shadow-lg text-center max-w-md mx-auto text-white" style={{ backgroundImage: "url('/images/bg.jpg')" }}>
             <h2 className="text-lg font-semibold mb-2">{phrase.english}</h2>
             <p className="text-xl font-bold text-green-300">{phrase.igbo}</p>
             <p className="text-sm text-gray-200 italic mb-2">{phrase.igbo_pron}</p>

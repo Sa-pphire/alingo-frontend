@@ -2,10 +2,9 @@
   "name": "Alingo",
   "short_name": "Alingo",
   "description": "Learn African languages with Alingo",
-  "start_url": "/",
+  "start_url": "/dashboard",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#004A40",
   "icons": [
     {
       "src": "/icons/icon-192x192.png",
