@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import toast from 'react-hot-toast';
 
@@ -23,7 +23,11 @@ export default function ForgotPassword() {
       const data = await res.json();
 
       if (res.ok) {
-        localStorage.setItem('resetEmail', email);
+        useEffect(() => {
+          if (email) {
+            localStorage.setItem('resetEmail', email);
+          }
+        }, [email]);
         toast.success('OTP sent to your email.');
         router.push('/login/forgot-password/reset');
       } else {

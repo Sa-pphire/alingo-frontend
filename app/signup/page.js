@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import GoogleLoginButton from '@/components/GoogleButton';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import PasswordField from '@/components/hidePassword';
 import { useRouter } from 'next/navigation';
 import { toast } from 'react-hot-toast';
@@ -13,7 +13,12 @@ export default function SignUp() {
     const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
-    localStorage.setItem('email', email);
+    useEffect(() => {
+        if (email) {
+            localStorage.setItem('email', email);
+        }
+    }, [email]);
+
 
 
     const checks = {
