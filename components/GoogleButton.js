@@ -22,7 +22,7 @@ export default function GoogleLoginButton() {
       if (!window.google || !divRef.current) return;
 
       window.google.accounts.id.initialize({
-        client_id: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID,
+        client_id: process.env.GOOGLE_CLIENT_ID,
         callback: async (response) => {
           const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/auth/google`, {
             method: 'POST',
